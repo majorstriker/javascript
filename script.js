@@ -39,17 +39,27 @@ function generateArray(length) {
     return array;
 
 }
-
+// #1
 const newArray = generateArray(5);
 console.log(newArray);
-let sum = 0;
-for (let i = 0; i < newArray.length; i++) {
-    sum += newArray[i];
-}
-console.log(sum);
+// let sum = 0;
+// for (let i = 0; i < newArray.length; i++) {
+//     sum += newArray[i];
+// }
+// console.log(sum);
 
-for (let i = 0; i < newArray.length; i++) {
-    if (newArray[i] === 3) {
-        console.log(`В массиве есть число 3`);
+// #2
+let minimum = newArray[0];
+for (const item of newArray) {
+    if (item < minimum) {
+        minimum = item;
     }
 }
+console.log(minimum);
+
+// #3
+// for (let i = 0; i < newArray.length; i++) {
+//     if (newArray[i] === 3) {
+//         console.log(`В массиве есть число 3`);
+//     }
+// }
