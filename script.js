@@ -8,22 +8,22 @@
 // 3 – нечетное число
 // …
 // 10 – четное число
-// for (let i = 0; i < 11; i++) {
-//     if (i === 0) {
-//         console.log(`${i} - это ноль`);
-//     } else if (i % 2 == 0) {
-//         console.log(`${i} - четное число`);
-//     } else if (i % 2 != 0) {
-//         console.log(`${i} - нечетное число`);
-//     }
-// }
+for (let i = 0; i < 11; i++) {
+    if (i === 0) {
+        console.log(`${i} - это ноль`);
+    } else if (i % 2 == 0) {
+        console.log(`${i} - четное число`);
+    } else if (i % 2 != 0) {
+        console.log(`${i} - нечетное число`);
+    }
+}
 
 // Задание 2
 // Дан массив [1, 2, 3, 4, 5, 6, 7]
 // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
-// const arr = [1, 2, 3, 4, 5, 6, 7];
-// arr.splice(3, 2);
-// console.log(arr);
+const arr = [1, 2, 3, 4, 5, 6, 7];
+arr.splice(3, 2);
+console.log(arr);
 
 // Задание 3
 // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
@@ -42,11 +42,11 @@ function generateArray(length) {
 // #1
 const newArray = generateArray(5);
 console.log(newArray);
-// let sum = 0;
-// for (let i = 0; i < newArray.length; i++) {
-//     sum += newArray[i];
-// }
-// console.log(sum);
+let sum = 0;
+for (let i = 0; i < newArray.length; i++) {
+    sum += newArray[i];
+}
+console.log(sum);
 
 // #2
 let minimum = newArray[0];
@@ -58,8 +58,8 @@ for (const item of newArray) {
 console.log(minimum);
 
 // #3
-// for (let i = 0; i < newArray.length; i++) {
-//     if (newArray[i] === 3) {
-//         console.log(`В массиве есть число 3`);
-//     }
-// }
+for (let i = 0; i < newArray.length; i++) {
+    if (newArray[i] === 3) {
+        console.log(`В массиве есть число 3`);
+    }
+}
