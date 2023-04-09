@@ -1,65 +1,127 @@
 'use strict';
 
 // Задание 1
-// Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
-// 0 – это ноль
-// 1 – нечетное число
-// 2 – четное число
-// 3 – нечетное число
-// …
-// 10 – четное число
-for (let i = 0; i < 11; i++) {
-    if (i === 0) {
-        console.log(`${i} - это ноль`);
-    } else if (i % 2 == 0) {
-        console.log(`${i} - четное число`);
-    } else if (i % 2 != 0) {
-        console.log(`${i} - нечетное число`);
-    }
-}
+// Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.
 
-// Задание 2
-// Дан массив [1, 2, 3, 4, 5, 6, 7]
-// Сделайте из этого массива следующий [1, 2, 3, 6, 7]
-const arr = [1, 2, 3, 4, 5, 6, 7];
-arr.splice(3, 2);
-console.log(arr);
+// const numbers = {
+//     keyin1: 1,
+//     keyin2: 2,
+//     keyin3: 3,
+//     keyin4: 4,
+//     keyin5: 5,
+//     keyin6: 6,
+//     keyin7: 7,
+// };
+
+// for (const key in numbers) {
+//     if (numbers[key] >= 3) {
+//         console.log(`Ключ: ${key} больше или равен 3`);
+//     } else {
+//         console.log(`Ключ: ${key} меньше 3`);
+//     }
+// }
+
+
+// // Задание 2
+// // Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+
+// 
+// const post = {
+//     author: "John", // вывести этот текст
+//     postId: 23,
+//     comments: [{
+//             userId: 10,
+//             userName: "Alex",
+//             text: "lorem ipsum",
+//             rating: {
+//                 likes: 10,
+//                 dislikes: 2, // вывести это число
+//             },
+//         },
+//         {
+//             userId: 5, // вывести это число
+//             userName: "Jane",
+//             text: "lorem ipsum 2", // вывести этот текст
+//             rating: {
+//                 likes: 3,
+//                 dislikes: 1,
+//             },
+//         },
+//     ],
+// };
+// console.log(post.author);
+// console.log(post.comments[0].rating.dislikes);
+// console.log(post.comments[1].userId);
+// console.log(post.comments[1].text);
+
 
 // Задание 3
-// Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
-// 1. Рассчитать сумму элементов этого массива
-// 2. Найти минимальное число
-// 3. Найти есть ли в этом массиве число 3
+// Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
 
-function generateArray(length) {
-    const array = [];
-    for (let i = 0; i < length; i++) {
-        array.push(Math.floor(Math.random() * 9));
-    }
-    return array;
+// const products = [{
+//         id: 3,
+//         price: 200,
+//     },
+//     {
+//         id: 4,
+//         price: 900,
+//     },
+//     {
+//         id: 1,
+//         price: 1000,
+//     },
+// ];
 
-}
-// #1
-const newArray = generateArray(5);
-console.log(newArray);
-let sum = 0;
-for (let i = 0; i < newArray.length; i++) {
-    sum += newArray[i];
-}
-console.log(sum);
+// products.forEach(element => {
+//     for (const key in element) {
+//         if (key === 'price') {
+//             element[key] = element[key] * 0.85;
+//             console.log(element);
+//         }
+//     }
+// });
 
-// #2
-let minimum = newArray[0];
-for (const item of newArray) {
-    if (item < minimum) {
-        minimum = item;
-    }
-}
-console.log(minimum);
 
-// #3
-for (let i = 0; i < newArray.length; i++) {
-    if (newArray[i] === 3) {
-        console.log(`В массиве есть число 3`);
-    }
-}
+// Задание 4
+// 1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив products.
+// 2. Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+
+// const products = [{
+//         id: 3,
+//         price: 127,
+//         photos: [
+//             "1.jpg",
+//             "2.jpg",
+//         ],
+//     },
+//     {
+//         id: 5,
+//         price: 499,
+//         photos: [],
+//     },
+//     {
+//         id: 10,
+//         price: 26,
+//         photos: [
+//             "3.jpg",
+//         ],
+//     },
+//     {
+//         id: 8,
+//         price: 78,
+//     },
+// ];
+
+
+// **Задание 5 **
+//     Дано 2 массива
+//     Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива— значениями.
+// const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+// const vacabulary = {};
+// if (en.length === ru.length) {
+//     for (let i = 0; i < en.length; i++) {
+//         vacabulary[en[i]] = ru[i];
+//     }
+// }
+// console.log(vacabulary);
